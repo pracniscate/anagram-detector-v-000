@@ -3,13 +3,13 @@ class Anagram
 
   def initialize(word)
     @word = word
-    @result = []
   end
 
   def match(array)
+    matched_array = []
     array.each do |word|
-      @result << word if word.split("").sort == @word.split("").sort
+      matched_array << word if word.split("").sort == self.split("").sort
     end
   end
-  @result
+  matched_array
 end
